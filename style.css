@@ -1,0 +1,145 @@
+body{
+    background: #eeeeee;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@keyframes x{
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#taiji {
+    height: 400px;
+    width: 400px;
+    border-radius: 200px;
+    position: relative;
+    overflow: hidden;
+    animation: x 10s infinite linear;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+}
+
+@media(max-width:500px){
+    #taiji {
+        height: 200px;
+        width: 200px;
+    }
+}
+
+#taiji>:first-child {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    background-color: black;
+}
+
+#taiji>:nth-child(2){
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    right: 0;
+    background-color: white;
+}
+
+#taiji>:nth-child(3) {
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+}
+
+@media(max-width:500px){
+
+#taiji>:nth-child(3) { 
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+}
+}
+
+#taiji>:nth-child(4) {
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    bottom: 0;
+    width: 200px;
+    height: 200px;
+    background-color: white;
+}
+
+@media(max-width:500px){
+    #taiji>:nth-child(4) {
+        margin-left: -50px;
+        height: 100px;
+        width: 100px;
+    }
+}
+
+#taiji>:nth-child(5) { 
+    width: 100px;
+    border-radius: 100px;
+    position: absolute;
+    left: 50%; 
+    margin-left: -25px; 
+    top: 75px; 
+    width: 50px; 
+    height: 50px;
+    background-color: white;
+}
+
+@media(max-width:500px){
+#taiji>:nth-child(5) { 
+    width: 50px;
+    border-radius: 50px;
+    margin-left: -12.5px; 
+    top: 37.5px; 
+    width: 25px; 
+    height: 25px;
+}
+
+
+}
+#taiji>:nth-child(6) {
+    border-radius: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -25px;
+    bottom: 75px;
+    width: 50px;
+    height: 50px;
+    background-color: black;
+}
+@media(max-width:500px){
+#taiji>:nth-child(6) { 
+    width: 50px;
+    border-radius: 50px;
+    margin-left: -12.5px; 
+    bottom: 37.5px; 
+    width: 25px; 
+    height: 25px;
+}
+#taiji-wrapper{
+    border: 1px solid red;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#daodejing {
+    margin-top: 1em;
+}
